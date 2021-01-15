@@ -51,8 +51,12 @@ body {font-size: 16px; font-family:'나눔고딕'; line-height: 1.5; color:#666;
         /* 블록성격의 자식들을 한줄로 정렬하기 위해 float 속성을 사용하면 부모의 높이가 사라지는 부작용이 발생함.
             이것을 해결하기 위해 부모요소에 overflow:hidden 속성을 줌*/
         /* .articlel {background: red;} */
-.article2 ul li {float: left; width: 25%; padding: 10px;}
+.article2 ul > li {float: left; width: 25%; margin: 30px 0; position: relative;}
+.article2 ul > li:hover::after {content: ''; display: block; background: rgba(0, 0, 0, 0.3); border-radius: 50%;
+                                position: absolute; top:0; left: 0; right: 0; bottom: 0;}
 .article2 p {color:#666; padding-bottom: 20px;}
+
+
 
 .article3 {text-align: center;}
 .article3 .chef {padding-top:50px}
